@@ -6,7 +6,7 @@ module.exports = {
 
   theme: 'vdoing', // 使用依赖包主题
   title: "Fu Doc",
-  description: '为java开发者管理Restful Api而生的Idea插件',
+  description: '为提升Java开发者工作效率而生的Idea插件',
   base: "/",
   head,
   themeConfig,
@@ -21,7 +21,7 @@ module.exports = {
   extraWatchFiles: [
     '.vuepress/config.js',
     '.vuepress/config/head.js',
-    '.vuepress/config/htmlModules.js',
+    // '.vuepress/config/htmlModules.js',
     '.vuepress/config/nav.js',
     '.vuepress/config/plugins.js',
     '.vuepress/config/themeConfig.js',

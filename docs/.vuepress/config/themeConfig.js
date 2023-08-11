@@ -1,5 +1,5 @@
 const nav = require("./nav.js");
-const htmlModules = require("./htmlModules.js");
+// const htmlModules = require("./htmlModules.js");
 
 // Theme Config
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
 
     // sidebarOpen: false, // 初始状态是否打开侧边栏，默认true
     updateBar: { // 最近更新栏
-        showToArticle: false, // 显示到文章页底部，默认true
+        showToArticle: true, // 显示到文章页底部，默认true
         // moreArticle: '/archives' // “更多文章”跳转的页面，默认'/archives'
     },
     titleBadge: false, // 文章标题前的图标是否显示，默认true
@@ -70,5 +70,5 @@ module.exports = {
         createYear: 2023, // 博客创建年份
         copyrightInfo: '王定福 | MIT License', // 博客版权信息，支持a标签
     },
-    htmlModules,
+    // htmlModules,
 }
