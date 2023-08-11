@@ -5,9 +5,9 @@ heroText: Fu Doc
 tagline: 🚀为提升Java开发者工作效率而生的Idea插件
 actions:
   - actionText: ⛵️快速开始 ->
-    actionLink: /pages/5816c5/
+    actionLink: /pages/36mm08/
   - actionText: ⚡️支持Fu Doc
-    actionLink: /pages/39mm06/
+    actionLink: /pages/36mm08/
     actionClass: button-fudoc
 bannerBg: none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 features: # 可选的
