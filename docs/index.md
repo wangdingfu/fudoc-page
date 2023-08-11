@@ -27,9 +27,7 @@ notices: # 可选的
     isHtmlContent: true
 ---
 
-<Notice :data="$frontmatter.notices"/>
-
-<p align="center">
+<p align="center" style="padding-top: 0;margin-top: 0">
   <a class="become-sponsor" href="/pages/fb599d/">成为赞助者</a>
 </p>
 
