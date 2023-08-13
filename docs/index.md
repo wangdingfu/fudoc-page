@@ -4,19 +4,19 @@ heroImage: /img/logo.svg
 heroText: Fu Doc
 tagline: 🚀为提升Java开发者工作效率而生的Idea插件
 actions:
-  - actionText: ⛵️快速开始 ->
+  - actionText: ⛵️快速开始 →
     actionLink: /pages/36mm08/
   - actionText: ⚡️支持Fu Doc
     actionLink: /pages/36mm08/
     actionClass: button-fudoc
 bannerBg: none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 features: # 可选的
-  - title: 🍀使用简单
-    details: 直接在Idea插件市场搜索 fudoc 一键安装即可使用, 没有任何学习成本却可以带来工作效率极大的提升
-  - title: 🌸效率至上
-    details: 依托于Idea平台提供的强大基础能力实现接口文档自动生成、一键同步、一键调试接口等众多提升工作效率的功能
-  - title: 🌼永远免费
-    details: 没有任何收费, 长期更新维护, 永远为java开发者们提供一个使用简单、效率至少、永远免费的Idea插件
+  - title: 🍀接口文档
+    details: 支持一键生成接口文档、一键同步至ApiFox、 ShowDoc、 YApi、等第三方文档系统
+  - title: 🌸接口请求
+    details: 支持读取接口信息回填至请求面板发起接口请求，并且支持定义前置脚本，鉴权等操作
+  - title: 🌼工具集
+    details: 依赖idea实现一些提示工作效率的工具, 例如接口url快速搜索、通过代码补全方式完成对象拷贝
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 postList: none
@@ -44,76 +44,72 @@ notices: # 可选的
 
 <br/>
 
-## 🍬特性
 
-* **组件定义统一：** 所有的逻辑都是组件，为所有的逻辑提供统一化的组件实现方式，小身材，大能量。
-* **规则轻量：** 基于规则文件来编排流程，学习规则入门只需要5分钟，一看既懂。
-* **规则多样化：** 规则支持xml、json、yml三种规则文件写法方式，喜欢哪种用哪个。
-* **任意编排：** 再复杂的逻辑过程，利用LiteFlow的规则，都是很容易做到的，看规则文件就能知道逻辑是如何运转的。
-* **规则持久化：** 框架原生支持把规则存储在标准结构化数据库，Nacos，Etcd，Zookeeper，Apollo。您也可以自己扩展，把规则存储在任何地方。
-* **优雅热刷新机制：** 规则变化，无需重启您的应用，即时改变应用的规则。高并发下不会因为刷新规则导致正在执行的规则有任何错乱。
-* **支持广泛：** 不管你的项目是不是基于Springboot，Spring还是任何其他java框架构建，LiteFlow都能游刃有余。
-* **JDK支持：** 从JDK8到JDK17，统统支持。无需担心JDK版本。
-* **Springboot支持全面：** 支持Springboot 2.X到最新的Springboot 3.X。
-* **脚本语言支持：** 可以定义脚本语言节点，支持Groovy，Javascript，QLExpress，Python，Lua，Aviator。未来还会支持更多的脚本语言。
-* **脚本和Java全打通：** 所有脚本语言均可调用Java方法，甚至于可以引用任意的实例，在脚本中调用RPC也是支持的。
-* **规则嵌套支持：** 只要你想的出，你可以利用简单的表达式完成多重嵌套的复杂逻辑编排。
-* **组件重试支持：** 组件可以支持重试，每个组件均可自定义重试配置和指定异常。
-* **上下文隔离机制：** 可靠的上下文隔离机制，你无需担心高并发情况下的数据串流。
-* **声明式组件支持：** 你可以让你的任意类秒变组件。
-* **详细的步骤信息：** 你的链路如何执行的，每个组件耗时多少，报了什么错，一目了然。
-* **稳定可靠：** 历时2年多的迭代，在各大公司的核心系统上稳定运行。
-* **性能卓越：** 框架本身几乎不消耗额外性能，性能取决你的组件执行效率。
-* **自带简单监控：** 框架内自带一个命令行的监控，能够知道每个组件的运行耗时排行。
+
+
+## 🎨特性
+
+* **文档模板：** 支持修改文档模板来生成自定义的接口文档。
+* **接口文档同步：** 支持将接口信息同步至`ApiFox`、`ShowDoc`、`YApi`等第三方接口文档平台。
+* **注解支持：** 支持`@Valid`相关注解表示参数是否必填，支持`@JsonIgnore`等注解。
+* **注释支持：** 支持解析Java注释为字段中文描述、接口名称、接口描述等，无需通过类似`Swagger`注解来标识字段名。
+* **Swagger支持：** 支持读取`Swagger`注解信息，如果同时有注释信息和`Swagger`注解, 则`Swagger`优先级更高。
+* **自定义数据支持：** 支持读取代码中指定注解信息、支持读取代码注释中指定的标签信息 可直接在接口文档模板中通过`${fudoc.tagName}`方式使用该数据。
+* **@see注解支持：** 支持在字段上标识`@see`注解引用枚举 生成文档时会自动生成该字段的枚举字典信息在备注上
+* **rpc支持：** 支持`Dubbo` `Feign`等接口生成接口文档。
+* **SpringBoot支持：** 自动解析Spring环境和配置文件，无需手动配置接口请求端口等信息。
+* **接口请求：** 通过优美的图形化界面(借鉴`PostMan`)发起接口请求。
+* **脚本支持：** 支持对指定项目配置前置脚本(`JavaScript`脚本)来实现一些鉴权等操作，支持实时调试脚本。
+* **全局参数：** 支持配置全局请求头、支持配置全局变量，全局管理Cookie。
+* **鉴权信息管理：** 支持配置多个鉴权用户，在接口请求界面可手动切换不同鉴权用户发起接口请求
+* **环境管理：** 默认自动读取SpringBoot环境，支持手动配置环境并在请求面板中手动切换不同环境
+* **文件上传下载：** 接口请求支持文件的上传和文件下载
+* **请求日志：** 每次请求时都会在请求面板的`Console`面板输出完整的请求日志，便于排查问题
+* **url快速搜索：** 通过快捷键`CTL+ALT+\ `或`CMD+ALT+\ `快速搜索接口
+* **代码补全：** 支持通过代码补全方式生成A对象属性赋值到B对象属性的代码（针对不喜欢通过`BeanUtils.copy`的同学是真香）
+* **稳定可靠：** 历时1年多迭代了近20多个版本。
+
 
 <br/>
 
-## ✨最新版本
+## ✨版本说明
 
-- V222.1.7.8 (**idea 2022.2版本以上**)
-- V212.1.7.8 (**idea 2021.2 ~ 2022.2**)
-- V203.1.7.8 (**idea 2020.2 ~ idea2021.2**)
+::: tip
+目前插件仅支持<Badge text="Idea2020.2 +" />以上的版本, 建议升级到idea2021以上的版本会有更好的体验和更多的功能支持
+::: 
 
-:::tip 新版本稳定吗？
-
-我们每一次发布版本，都会补充大量的测试用例。庞大的测试用例数目几乎覆盖到每一个已有功能的细节点。
-
-并且我们会跑超大量的并发压力测试，以上所有的通过后，我们才会谨慎的提交代码覆盖主分支进行发版。
-
-你大可不必担心新版本不稳定的情况，况且，我们有良好的社区群。基本上有问必答，如出现bug，基本上隔天必解决。
-
-所以，请放心的使用！
+::: cardList
+```yaml
+- name: 222.*
+  desc: 支持Idea2022.2 + 版本
+  bgColor: '#CBEAFA' # 可选，默认var(--bodyBg)。颜色值有#号时请添加单引号
+  textColor: '#6854A1' # 可选，默认var(--textColor)
+- name: 212.*
+  desc: 支持Idea2021.2 ~ 2022.2版本
+  bgColor: '#718971'
+  textColor: '#fff'
+- name: 203.*
+  desc: 支持idea2020.2 ~ idea2021.2版本
+  bgColor: '#FCDBA0'
+  textColor: '#A05F2C'
+```
 :::
 
-<br/>
 
-## 🎉致谢
-
-LiteFlow自从2020年开源以来，获得了很多人的支持。目前社区群3500多人，Gitee上4.4k Stars，Github上2k
-Stars，感谢各位支持者的一路同行，我们会努力把国产的规则引擎做到极致。
-
-LiteFlow在[2021](https://www.oschina.net/project/top_cn_2021)获得“OSC 年度最受欢迎中国开源软件”殊荣。
-
-LiteFlow在2022年获得“Gitee最有价值开源项目“奖项（GVP）。
-
-LiteFlow在2022年成为了"中国信通院可信开源社区共同体(TWOS)成员"。
-
-感谢OSCHINA和Gitee官方平台对LiteFlow项目的推荐和肯定。
-
-LiteFlow首页的背景由插画师`森阳`提供，感谢她的创作，如需要插画商业合作小伙伴可以联系她：
-
-> 邮件：sssenyang@qq.com | 微信：ArtSenyang
 
 <br/>
+
+
 
 ## 🏡代码托管
 
-<a href='https://gitee.com/dromara/liteFlow' target="_blank">
-    <img class="no-zoom" :src="$withBase('/img/Gitee-red.svg')"/>
+
+<a href='https://gitee.com/wdfu/fudoc' target="_blank">
+    <img class="no-zoom" src="https://img.shields.io/badge/Gitee-red?logo=gitee&logoColor=white&style=for-the-badge"/>
 </a>
 
-<a href="https://github.com/dromara/liteflow" target="_blank">
-    <img class="no-zoom" :src="$withBase('/img/Github-blue.svg')"/>
+<a href="https://github.com/wangdingfu/fu-api-doc-plugin" target="_blank">
+    <img class="no-zoom" src="https://img.shields.io/badge/Github-blue?logo=github&logoColor=white&style=for-the-badge"/>
 </a>
 
 <br/><br/>
@@ -122,7 +118,7 @@ LiteFlow首页的背景由插画师`森阳`提供，感谢她的创作，如需�
 
 欢迎各路好汉一起来参与完善 `Fu Doc`，我们期待你的 PR！
 
-如果想贡献，请先查看[参与开发](/pages/ae4dd5/)。
+如果想贡献，请先查看[参与开发](/pages/567a10/)。
 
 <br/>
 

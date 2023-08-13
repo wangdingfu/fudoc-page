@@ -2,7 +2,8 @@
   "name": "theme-vdoing-doc",
   "version": "1.0.0",
   "scripts": {
-    "serve": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
+    "serve1": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
     "build": "set NODE_OPTIONS=--openssl-legacy-provider  && vuepress build docs",
     "deploy": "bash deploy.sh",
     "updateTheme": "yarn remove vuepress-theme-vdoing && rm -rf node_modules && yarn && yarn add vuepress-theme-vdoing -D",
@@ -26,6 +27,7 @@
     "vuepress-theme-vdoing": "^1.11.2",
     "yamljs": "^0.3.0"
   },
+  "description": "Fu Doc官网",
   "dependencies": {
     "core-js": "2.x",
     "element-ui": "^2.15.9"

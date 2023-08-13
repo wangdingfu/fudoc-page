@@ -1,0 +1,223 @@
+diff --git a/node_modules/vuepress-theme-vdoing/components/Home.vue b/node_modules/vuepress-theme-vdoing/components/Home.vue
+index c22d81b..21d646e 100644
+--- a/node_modules/vuepress-theme-vdoing/components/Home.vue
++++ b/node_modules/vuepress-theme-vdoing/components/Home.vue
+@@ -6,6 +6,7 @@
+       :class="{ 'hide-banner': !showBanner }"
+       :style="bannerBgStyle"
+     >
++      <video v-show="videoBackgroundSrc != null" :src="videoBackgroundSrc" class="video-background" autoPlay preload="auto" loop="loop" muted="muted" controlsList="nodownload" oncontextmenu="return(false);"></video>
+       <div
+         class="banner-conent"
+         :style="
+@@ -24,13 +25,15 @@
+           <p v-if="homeData.tagline" class="description">
+             {{ homeData.tagline }}
+           </p>
+-          <p class="action" v-if="homeData.actionText && homeData.actionLink">
+-            <NavLink class="action-button" :item="actionLink" />
++          <p class="action" v-if="hasActions">
++            <NavLink v-for="(action, index) in homeData.actions"  :key="index"
++              :class="action.actionClass || 'action-button'"
++              :item="{text: action.actionText, link: action.actionLink}" />
+           </p>
+         </header>
+
+         <!-- PC端features块 s -->
+-        <div class="features" v-if="hasFeatures && !isMQMobile">
++        <div class="features" v-if="hasFeatures" v-show="!isMQMobile">
+           <div
+             class="feature"
+             v-for="(feature, index) in homeData.features"
+@@ -162,7 +165,6 @@
+     </MainLayout>
+   </div>
+ </template>
+-
+ <script>
+ import NavLink from "@theme/components/NavLink";
+ import BScroll from "@better-scroll/core"
+@@ -182,7 +184,7 @@ BScroll.use(Slide)
+ export default {
+   data() {
+     return {
+-      isMQMobile: false,
++      isMQMobile: true,
+
+       slide: null,
+       currentPageIndex: 0,
+@@ -194,8 +196,30 @@ export default {
+       currentPage: 1// 当前页
+     }
+   },
++  props: {
++    themeMode: {
++      type: String,
++      required: true,
++      default: null
++    }
++  },
+   computed: {
++    videoBackgroundSrc() {
++      if (this.isMQMobile){
++        return null;
++      }
++      if (this.themeMode === 'dark'){
++        return "/video/bg-dark.mov"
++      }else if (this.themeMode === 'light'){
++        return "/video/bg-light.mov"
++      }else if (this.themeMode === 'read'){
++        return "/video/bg-read.mov"
++      }else{
++        return null;
++      }
++    },
+     homeData() {
++      console.log('this.$page.frontmatter', this.$page.frontmatter)
+       return {
+         ...this.$page.frontmatter
+       }
+@@ -203,6 +227,10 @@ export default {
+     hasFeatures() {
+       return !!(this.homeData.features && this.homeData.features.length)
+     },
++    hasActions() {
++      console.log('hasActions', this.homeData.actions)
++      return !!(this.homeData.actions && this.homeData.actions.length)
++    },
+     homeSidebarB() {
+       const { htmlModules } = this.$themeConfig
+       return htmlModules ? htmlModules.homeSidebarB : ''
+@@ -233,12 +261,6 @@ export default {
+         return `background: url(${this.$withBase(bannerBg)}) center center / cover no-repeat`
+       }
+
+-    },
+-    actionLink() {
+-      return {
+-        link: this.homeData.actionLink,
+-        text: this.homeData.actionText
+-      };
+     }
+   },
+   components: { NavLink, MainLayout, PostList, UpdateArticle, BloggerBar, CategoriesBar, TagsBar, Pagination },
+@@ -249,6 +271,7 @@ export default {
+     this.isMQMobile = window.innerWidth < MOBILE_DESKTOP_BREAKPOINT ? true : false; // vupress在打包时不能在beforeCreate(),created()访问浏览器api（如window）
+   },
+   mounted() {
++
+     if (this.$route.query.p) {
+       this.currentPage = Number(this.$route.query.p)
+     }
+@@ -274,6 +297,9 @@ export default {
+     this.slide && this.slide.destroy()
+   },
+   watch: {
++    themeMode(){
++      console.log(this.themeMode)
++    },
+     '$route.query.p'() {
+       if (!this.$route.query.p) {
+         this.currentPage = 1
+diff --git a/node_modules/vuepress-theme-vdoing/components/NavLink.vue b/node_modules/vuepress-theme-vdoing/components/NavLink.vue
+index 93feac7..429934b 100644
+--- a/node_modules/vuepress-theme-vdoing/components/NavLink.vue
++++ b/node_modules/vuepress-theme-vdoing/components/NavLink.vue
+@@ -11,8 +11,8 @@
+     :href="link"
+     @focusout="focusoutAction"
+     class="nav-link external"
+-    :target="isMailto(link) || isTel(link) ? null : '_blank'"
+-    :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
++    :target="target"
++    :rel="rel"
+   >
+     {{ item.text }}
+     <OutboundLink />
+@@ -39,6 +39,29 @@ export default {
+         return Object.keys(this.$site.locales).some(rootLink => rootLink === this.link)
+       }
+       return this.link === '/'
++    },
++
++    target () {
++      if (this.isNonHttpURI) {
++        return null
++      }
++      if (this.item.target) {
++        return this.item.target
++      }
++      return isExternal(this.link) ? '_blank' : ''
++    },
++
++    rel () {
++      if (this.isNonHttpURI) {
++        return null
++      }
++      if (this.item.rel === false) {
++        return null
++      }
++      if (this.item.rel) {
++        return this.item.rel
++      }
++      return this.isBlankTarget ? 'noopener noreferrer' : null
+     }
+   },
+
+diff --git a/node_modules/vuepress-theme-vdoing/components/Sidebar.vue b/node_modules/vuepress-theme-vdoing/components/Sidebar.vue
+index 5e5c9c0..f97615d 100644
+--- a/node_modules/vuepress-theme-vdoing/components/Sidebar.vue
++++ b/node_modules/vuepress-theme-vdoing/components/Sidebar.vue
+@@ -1,5 +1,6 @@
+ <template>
+   <aside class="sidebar">
++    <slot name="top" />
+     <div class="blogger" v-if="blogger">
+       <img :src="blogger.avatar" />
+       <div class="blogger-info">
+@@ -22,7 +23,7 @@
+     <!-- 移动端Nav -->
+     <NavLinks />
+
+-    <slot name="top" />
++
+
+     <SidebarLinks :depth="0" :items="items" />
+     <slot name="bottom" />
+@@ -97,13 +98,22 @@ export default {
+     margin-bottom -0.5rem
+     font-size 0.85rem
+     &.sidebar-slot-top
+-      padding 1.5rem 1.5rem 0
++      padding 1.5rem;
+     &.sidebar-slot-bottom
+       padding 0 1.5rem 1.5rem
+ @media (max-width $MQMobile)
+   .sidebar
++    display: block !important;
++    overflow-y: auto !important;
++    ul[class="sidebar-links"]
++      overflow-y: hidden !important;
++      height: auto !important
++    nav[class="nav-links"]
++      overflow-y: hidden !important;
++      height: auto !important;
+     .blogger
+       display flex
++    .sidebar-links
+     .nav-links
+       display block
+       .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after
+diff --git a/node_modules/vuepress-theme-vdoing/layouts/Layout.vue b/node_modules/vuepress-theme-vdoing/layouts/Layout.vue
+index 62dda70..596eedd 100644
+--- a/node_modules/vuepress-theme-vdoing/layouts/Layout.vue
++++ b/node_modules/vuepress-theme-vdoing/layouts/Layout.vue
+@@ -36,7 +36,7 @@
+     </Sidebar>
+
+     <!-- 首页 -->
+-    <Home v-if="$page.frontmatter.home" />
++    <Home v-if="$page.frontmatter.home" :themeMode="themeMode" />
+
+     <!-- 分类页 -->
+     <CategoriesPage v-else-if="$page.frontmatter.categoriesPage" />

@@ -9,7 +9,7 @@ module.exports = {
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
 
-    docsRepo: "bryan31/liteflow-homepage",
+    docsRepo: "wangdingfu/fudoc-page",
     docsDir: 'docs', // 编辑的文件夹
     editLinks: true, // 编辑链接
     editLinkText: '帮助我们改善此文档',
@@ -52,23 +52,23 @@ module.exports = {
             {
                 iconClass: 'icon-youjian',
                 title: '发邮件',
-                link: 'mailto:weenyc31@163.com'
+                link: 'mailto:wangdingfu1024@163.com'
             },
             {
                 iconClass: 'icon-gitee',
                 title: 'Gitee',
-                link: 'https://gitee.com/dromara/liteFlow'
+                link: 'https://gitee.com/wdfu/fudoc'
             },
             {
                 iconClass: 'icon-github',
                 title: 'GitHub',
-                link: 'https://github.com/dromara/liteflow'
+                link: 'https://github.com/wangdingfu/fu-api-doc-plugin'
             }
         ]
     },
     footer: { // 页脚信息
         createYear: 2023, // 博客创建年份
-        copyrightInfo: '王定福 | MIT License', // 博客版权信息，支持a标签
+        copyrightInfo: '王定福 | 鄂ICP备2023000920号 | MIT License', // 博客版权信息，支持a标签
     },
     // htmlModules,
 }
