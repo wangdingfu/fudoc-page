@@ -4,7 +4,7 @@
   "scripts": {
     "serve1": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
     "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider  && vuepress build docs",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider  && vuepress build docs",
     "deploy": "bash deploy.sh",
     "updateTheme": "yarn remove vuepress-theme-vdoing && rm -rf node_modules && yarn && yarn add vuepress-theme-vdoing -D",
     "editFm": "node utils/editFrontmatter.js",
