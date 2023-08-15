@@ -5,7 +5,7 @@ heroText: Fu Doc
 tagline: 🚀为提升Java开发者工作效率而生的Idea插件
 actions:
   - actionText: ⛵️快速开始 →
-    actionLink: /pages/36mm08/
+    actionLink: /pages/e8ef29/
   - actionText: ⚡️支持Fu Doc
     actionLink: /pages/36mm08/
     actionClass: button-fudoc
