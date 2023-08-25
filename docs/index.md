@@ -45,8 +45,16 @@ notices: # 可选的
 
 <br/>
 
+<br/>
+<p align="center">
+  <a href="https://plugins.jetbrains.com/plugin/19269-fu-doc" target="_blank"><img src="https://img.shields.io/jetbrains/plugin/v/19269-fu-doc.svg" alt="fudoc" class="no-zoom"></a>
+  <a href="https://plugins.jetbrains.com/plugin/19269-fu-doc/versions" target="_blank"><img src="http://phpstorm.espend.de/badge/19269/version" alt="fudoc" class="no-zoom"></a>
+  <a href="https://plugins.jetbrains.com/plugin/19269-fu-doc" target="_blank"><img src='https://img.shields.io/jetbrains/plugin/d/19269-fu-doc.svg' alt='download' class="no-zoom"></a>
+  <a href="https://github.com/wangdingfu/fu-api-doc-plugin" target="_blank"><img src='https://img.shields.io/github/stars/wangdingfu/fu-api-doc-plugin' alt='GitHub stars' class="no-zoom"></a>
+  <a href="https://plugins.jetbrains.com/plugin/19269-fu-doc" target="_blank"><img src='https://img.shields.io/badge/license-MIT-red.svg' alt='MIT' class="no-zoom"></a>
+</p>
 
-
+<br/>
 
 ## 🎨特性
 
