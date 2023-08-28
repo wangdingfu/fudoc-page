@@ -29,7 +29,7 @@ notices: # 可选的
 <Notice :data="$frontmatter.notices"/>
 
 <p align="center" style="padding-top: 0;margin-top: 0">
-  <a class="become-sponsor" href="/pages/fb599d/">成为赞助者</a>
+  <a class="become-sponsor" href="/pages/2a8323/">成为赞助者</a>
 </p>
 
 <style>
@@ -76,7 +76,7 @@ notices: # 可选的
 * **文件上传下载：** 接口请求支持文件的上传和文件下载
 * **请求日志：** 每次请求时都会在请求面板的`Console`面板输出完整的请求日志，便于排查问题
 * **url快速搜索：** 通过快捷键`CTL+ALT+\ `或`CMD+ALT+\ `快速搜索接口
-* **代码补全：** 支持通过代码补全方式生成A对象属性赋值到B对象属性的代码（针对不喜欢通过`BeanUtils.copy`的同学是真香）
+* **代码补全：** 支持通过代码补全方式生成A对象属性赋值到B对象属性的代码（针对不喜欢通过`BeanUtils.copy`的同学非常友好）
 * **稳定可靠：** 历时1年多迭代了近20多个版本。
 
 
@@ -134,7 +134,7 @@ notices: # 可选的
 
 ## 🍭架构图
 
-<img :src="$withBase('/img/arch.svg')" style="zoom: 100%;" class="no-zoom">
+<img :src="$withBase('/img/guide/guide.png')" style="zoom: 100%;" class="no-zoom">
 
 <br/>
 
