@@ -2,17 +2,17 @@
 home: true
 heroImage: /img/logo.svg
 heroText: Fu Doc
-tagline: 🚀为提升Java开发者工作效率而生的Idea插件
+tagline: 🚀为提升Java开发者工作效率而生的IDEA插件<Badge text="2020.2 +" />
 actions:
   - actionText: ⛵️快速开始 →
     actionLink: /pages/e8ef29/
-  - actionText: ⚡️视频演示
+  - actionText: ⚡️视频演示  
     actionLink: /pages/77f026/
     actionClass: button-fudoc
 bannerBg: none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 features: # 可选的
   - title: 🍀接口文档
-    details: 支持一键生成接口文档、一键同步至ApiFox、 ShowDoc、 YApi、等第三方文档系统
+    details: 支持一键生成接口文档、一键同步至ApiFox、 ShowDoc、 YApi等第三方文档系统
   - title: 🌸接口请求
     details: 支持读取接口信息回填至请求面板发起接口请求，并且支持定义前置脚本，鉴权等操作
   - title: 🌼工具集
