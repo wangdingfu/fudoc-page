@@ -2,7 +2,7 @@
 home: true
 heroImage: /img/logo.svg
 heroText: Fu Doc
-tagline: 🚀为提升Java开发者工作效率而生的IDEA插件<Badge text="2020.2 +" />
+tagline: 🚀为提升Java开发者工作效率而生的IDEA插件
 actions:
   - actionText: ⛵️快速开始 →
     actionLink: /pages/e8ef29/
@@ -85,17 +85,17 @@ notices: # 可选的
 ## ✨版本说明
 
 ::: tip
-目前插件仅支持<Badge text="Idea2020.2 +" />以上的版本, 建议升级到idea2021以上的版本会有更好的体验和更多的功能支持
+目前插件仅支持<Badge text="IDEA2020.2 +" />以上的版本, 建议升级到idea2021以上的版本会有更好的体验和更多的功能支持
 ::: 
 
 ::: cardList
 ```yaml
 - name: 222.*
-  desc: 支持Idea2022.2 + 版本
+  desc: 支持IDEA2022.2 + 版本
   bgColor: '#CBEAFA' # 可选，默认var(--bodyBg)。颜色值有#号时请添加单引号
   textColor: '#6854A1' # 可选，默认var(--textColor)
 - name: 212.*
-  desc: 支持Idea2021.2 ~ 2022.2版本
+  desc: 支持IDEA2021.2 ~ 2022.2版本
   bgColor: '#718971'
   textColor: '#fff'
 - name: 203.*

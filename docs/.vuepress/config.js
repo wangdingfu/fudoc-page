@@ -6,7 +6,7 @@ module.exports = {
 
   theme: 'vdoing', // 使用依赖包主题
   title: "Fu Doc",
-  description: '为提升Java开发者工作效率而生的Idea插件',
+  description: '为提升Java开发者工作效率而生的IDEA插件',
   base: "/",
   head,
   themeConfig,
