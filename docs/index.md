@@ -7,7 +7,7 @@ actions:
   - actionText: ⛵️快速开始 →
     actionLink: /pages/e8ef29/
   - actionText: ⚡️视频演示
-    actionLink: https://www.bilibili.com/video/BV1VY411w7BZ/?spm_id_from=333.337.search-card.all.click&vd_source=23e10d711ae76f73385f2f1310a86435
+    actionLink: /pages/77f026/
     actionClass: button-fudoc
 bannerBg: none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 features: # 可选的
