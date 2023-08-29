@@ -22,9 +22,6 @@ module.exports = [
     },
     { text: '💖赞助', link: '/pages/2a8323/' },
     { text: '👥加入群聊', link: '/pages/52cc67/' },
-    { text: '🏡仓库托管', items: [
-            { text: 'Gitee', link: 'https://gitee.com/wdfu/fudoc' },
-            { text: 'Github', link: 'https://github.com/wangdingfu/fu-api-doc-plugin' },
-        ]
-    },
+    { text: '🏡GitHub', link: 'https://github.com/wangdingfu/fu-api-doc-plugin'},
+    { text: '🐯Gitee', link: 'https://gitee.com/wdfu/fudoc'}
 ];

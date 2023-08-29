@@ -21,9 +21,9 @@ features: # 可选的
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 postList: none
 notices: # 可选的
-  - id: fudoc-V222.1.7.9
-    title: 🚀 [Fu Doc] v222.1.7.9 发布！
-    content: '<div><p>2023-08-04</p><ul><li>[增强]全面支持JDK17</li><li>[增强]SQL插件支持使用系统内的数据源</li><li>[增强]很多功能有所增强</li></ul></div><p style="text-align: right;"><a href="/pages/8ff012/">查看详情</a></p>'
+  - id: fudoc-V1.7.9
+    title: 🚀 [Fu Doc] 1.7.9 发布！
+    content: '<div><p>2023-08-04</p><ul><li>[增强]新增支持IDEA 2020.2以上的版本</li><li>[增强]支持代码补全beanCopy</li><li>前置脚本支持日志输出</li></ul></div><p style="text-align: right;"><a href="/pages/2e9223/">查看详情</a></p>'
     isHtmlContent: true
 ---
 <Notice :data="$frontmatter.notices"/>
