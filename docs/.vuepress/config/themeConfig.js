@@ -9,11 +9,6 @@ module.exports = {
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
 
-    docsRepo: "wangdingfu/fudoc-page",
-    docsDir: 'docs', // 编辑的文件夹
-    editLinks: true, // 编辑链接
-    editLinkText: '帮助我们改善此文档',
-
     // 以下配置是Vdoing主题改动的和新增的配置
     sidebar: { mode: 'structuring', collapsable: false }, // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | 自定义    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
 
@@ -50,7 +45,7 @@ module.exports = {
         // iconfontCssFile: '//at.alicdn.com/t/font_1678482_u4nrnp8xp6g.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自由添加
         icons: [
             {
-                iconClass: 'icon-youjian',
+                iconClass: 'icon-email',
                 title: '发邮件',
                 link: 'mailto:wangdingfu1024@163.com'
             },
