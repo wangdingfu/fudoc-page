@@ -13,11 +13,16 @@ module.exports = [
     { text: '❓问答', items: [
             { text: '常见问题', link: '/pages/047c9a/'},
             { text: '专题', items: [
+                    { text: '如何使用变量？', link: '/pages/8cb220/'},
+                    { text: '如何关闭自动读取Spring配置文件？', link: '/pages/af2852/'},
                     { text: '后期是否会考虑收费？', link: '/pages/8d117e/'},
-                    { text: 'Fu Doc会考虑出团队版吗？', link: '/pages/dd6753/'},
-                    { text: '是否支持快速调试Spring容器中的对象方法？', link: '/pages/304527/'}
+                    { text: 'Fu Doc会考虑出团队版吗？', link: '/pages/dd6753/'}
                 ]
             },
+        ]
+    },
+    { text: '配置', items: [
+            { text: '前置脚本示例', link: '/pages/047c9a/'}
         ]
     },
     { text: '💖赞助', link: '/pages/2a8323/' },
