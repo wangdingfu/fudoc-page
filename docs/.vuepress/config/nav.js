@@ -22,7 +22,7 @@ module.exports = [
         ]
     },
     { text: '配置', items: [
-            { text: '前置脚本示例', link: '/pages/047c9a/'}
+            { text: '前置脚本示例', link: '/pages/087a0f/'}
         ]
     },
     { text: '💖赞助', link: '/pages/2a8323/' },
