@@ -1,6 +1,6 @@
 module.exports = [
     { text: '💒首页', link: '/' },
-    { text: '🎉指南', items: [
+    { text: '🔥指南', items: [
             { text: '快速入门', link: '/pages/e8ef29/'},
             { text: '快速生成接口文档', link: '/pages/cb42c3/'},
             { text: '快速同步接口文档', link: '/pages/0a1917/'},
@@ -21,11 +21,10 @@ module.exports = [
             },
         ]
     },
-    { text: '⭐配置', items: [
+    { text: '🎉配置', items: [
             { text: '前置脚本示例', link: '/pages/087a0f/'}
         ]
     },
-    { text: '🔥 学习', link: '/pages/262980/'},
     { text: '💖赞助', link: '/pages/2a8323/' },
     { text: '👥加入群聊', link: '/pages/52cc67/' },
     { text: '🏡GitHub', link: 'https://github.com/wangdingfu/fu-api-doc-plugin'},
