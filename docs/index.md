@@ -11,10 +11,10 @@ actions:
     actionClass: button-fudoc
 bannerBg: none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 features: # 可选的
-  - title: 🍀接口文档
+  - title: 🍀文档助手
     details: 支持一键生成接口文档、一键同步至ApiFox、 ShowDoc、 YApi等第三方文档系统
-  - title: 🌸接口请求
-    details: 支持读取接口信息回填至请求面板发起接口请求，并且支持定义前置脚本，鉴权等操作
+  - title: 🌸调试利器
+    details: 一个集成在Idea中的PostMan。让你能够极其方便的调试接口
   - title: 🌼工具集
     details: 依赖idea实现一些提示工作效率的工具, 例如接口url快速搜索、通过代码补全方式完成对象拷贝
 

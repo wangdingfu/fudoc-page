@@ -1,5 +1,5 @@
 const nav = require("./nav.js");
-// const htmlModules = require("./htmlModules.js");
+const htmlModules = require("./htmlModules.js");
 
 // Theme Config
 module.exports = {
@@ -65,5 +65,5 @@ module.exports = {
         createYear: 2023, // 博客创建年份
         copyrightInfo: '王定福 | 鄂ICP备2023000920号 | MIT License', // 博客版权信息，支持a标签
     },
-    // htmlModules,
+    htmlModules
 }

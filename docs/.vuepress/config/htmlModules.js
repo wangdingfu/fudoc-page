@@ -1,4 +1,4 @@
-// const advHtml = require('./adv.js')
+const advHtml = require('./adv.js')
 /** 插入自定义html模块 (可用于插入广告模块等)
  * {
  *   homeSidebarB: htmlString, 首页侧边栏底部
@@ -22,51 +22,29 @@
 module.exports = {
   // sidebarT: advHtml(),
   // // 万维广告
-  // pageT: `
-  // <div class="wwads-cn wwads-horizontal page-wwads" data-id="129"></div>
-  // <style>
-  //     .page-wwads{
-  //       width:100%!important;
-  //       min-height: 0;
-  //       margin: 0;
-  //     }
-  //     .page-wwads .wwads-img img{
-  //       width:80px!important;
-  //     }
-  //     .page-wwads .wwads-poweredby{
-  //       width: 40px;
-  //       position: absolute;
-  //       right: 25px;
-  //       bottom: 3px;
-  //     }
-  //     .wwads-content .wwads-text, .page-wwads .wwads-text{
-  //       height: 100%;
-  //       padding-top: 5px;
-  //       display: block;
-  //     }
-  // </style>
-  // `,
-  // windowRB: `
-  //   <div class="wwads-cn wwads-vertical windowRB" data-id="136" style="max-width:160px;
-  //   min-width: auto;min-height:auto;"></div>
-  //   <style>
-  //     .windowRB{ padding: 0;}
-  //     .windowRB .wwads-img{margin-top: 10px;}
-  //     .windowRB .wwads-content{margin: 0 10px 10px 10px;}
-  //     .custom-html-window-rb .close-but{
-  //       display: none;
-  //     }
-  //   </style>
-  // `
+  windowRB: `
+<h3 style="color: #e04375">合作公告：</h3>
+<p style="color: #e04375;line-height: 30px">
+<strong>目前作者正在组建团队专职承接java相关项目开发，如果您有相关项目需要外包，非常欢迎<a href="/pages/52cc67/">联系作者</a>合作</strong>
+</p>
+    <style>
+      .windowRB{ padding: 0;}
+      .windowRB .wwads-img{margin-top: 10px;}
+      .windowRB .wwads-content{margin: 0 10px 10px 10px;}
+      .custom-html-window-rb .close-but{
+        display: none;
+      }
+    </style>
+  `
 }
 
 
 // module.exports = {
-//   homeSidebarB: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
-//   sidebarT: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
-//   sidebarB: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
-//   pageT: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
-//   pageB: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
-//   windowLB: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
-//   windowRB: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
+  // homeSidebarB: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
+  // sidebarT: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
+  // sidebarB: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
+  // pageT: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试3333</div>`,
+  // pageB: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
+  // windowLB: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
+  // windowRB: `<div style="width:100%;height:100px;color:#fff;background: #eee;">自定义模块测试</div>`,
 // }
