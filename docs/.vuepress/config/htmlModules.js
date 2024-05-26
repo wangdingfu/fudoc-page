@@ -19,24 +19,24 @@ const advHtml = require('./adv.js')
  * ②注：windowLB 和 windowRB：1.展示区块最大宽高200px*400px。2.请给自定义元素定一个不超过200px*400px的宽高。3.在屏幕宽度小于960px时无论如何都不会显示。
  */
 
-module.exports = {
+// module.exports = {
   // sidebarT: advHtml(),
   // // 万维广告
-  windowRB: `
-<h3 style="color: #e04375">合作公告：</h3>
-<p style="color: #e04375;line-height: 30px">
-<strong>目前作者正在组建团队专职承接java相关项目开发，如果您有相关项目需要外包，非常欢迎<a href="/pages/52cc67/">联系作者</a>合作</strong>
-</p>
-    <style>
-      .windowRB{ padding: 0;}
-      .windowRB .wwads-img{margin-top: 10px;}
-      .windowRB .wwads-content{margin: 0 10px 10px 10px;}
-      .custom-html-window-rb .close-but{
-        display: none;
-      }
-    </style>
-  `
-}
+//   windowRB: `
+// <h3 style="color: #e04375">合作公告：</h3>
+// <p style="color: #e04375;line-height: 30px">
+// <strong>目前作者正在组建团队专职承接java相关项目开发，如果您有相关项目需要外包，非常欢迎<a href="/pages/52cc67/">联系作者</a>合作</strong>
+// </p>
+//     <style>
+//       .windowRB{ padding: 0;}
+//       .windowRB .wwads-img{margin-top: 10px;}
+//       .windowRB .wwads-content{margin: 0 10px 10px 10px;}
+//       .custom-html-window-rb .close-but{
+//         display: none;
+//       }
+//     </style>
+//   `
+// }
 
 
 // module.exports = {

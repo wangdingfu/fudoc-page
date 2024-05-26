@@ -3,13 +3,13 @@ const loveMe = require("./../plugins/love-me");
 // Plugin Config
 module.exports = [
     // 鼠标点击爱心特效
-    [
-        loveMe,
-        {
-            color: "#11a8cd",
-            excludeClassName: "theme-vdoing-content"
-        }
-    ],
+    // [
+    //     loveMe,
+    //     {
+    //         color: "#11a8cd",
+    //         excludeClassName: "theme-vdoing-content"
+    //     }
+    // ],
     ['fulltext-search'], // 全文搜索
 
     // 搜索框第三方搜索
