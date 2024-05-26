@@ -139,22 +139,3 @@ notices: # 可选的
 <br/>
 
 ---
-
-<style>
-  .button-fudoc{
-    margin-left: 0.5rem;
-    margin-top: 0.5rem;
-    display: inline-block;
-    font-size: 1.2rem;
-    background-color: #e01e5a;
-    padding: 0.8rem 1.6rem;
-    border-radius: 4px;
-    transition: background-color 0.1s ease;
-    box-sizing: border-box;
-    color: #E3E394;
-  }
-
-.button-fudoc:hover {
-    background-color: #e4346a
-}
-</style>
