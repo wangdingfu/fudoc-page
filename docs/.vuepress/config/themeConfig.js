@@ -63,7 +63,7 @@ module.exports = {
     },
     footer: { // 页脚信息
         createYear: 2023, // 博客创建年份
-        copyrightInfo: '王定福 | 鄂ICP备2023000920号 | MIT License', // 博客版权信息，支持a标签
+        copyrightInfo: '王定福 | <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2023000920号-1</a> | MIT License', // 博客版权信息，支持a标签
     },
     htmlModules
 }
