@@ -26,7 +26,7 @@ notices: # 可选的
     content: '<div><p>2023-08-04</p><ul><li>[增强]新增支持IDEA 2020.2以上的版本</li><li>[增强]支持代码补全beanCopy</li><li>前置脚本支持日志输出</li></ul></div><p style="text-align: right;"><a href="/pages/2e9223/">查看详情</a></p>'
     isHtmlContent: true
 ---
-<Notice :data="$frontmatter.notices"/>
+
 
 <p align="center" style="padding-top: 0;margin-top: 0">
   <a class="become-sponsor" href="/pages/2a8323/">成为赞助者</a>
