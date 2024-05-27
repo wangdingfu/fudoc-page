@@ -5,7 +5,7 @@ const plugins = require('./config/plugins.js');
 module.exports = {
 
   theme: 'vdoing', // 使用依赖包主题
-  title: "fudoc提升java开发效率神器",
+  title: "FuDoc简介",
   description: '为提升Java开发者工作效率而生的IDEA插件',
   base: "/",
   head,
