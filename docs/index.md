@@ -6,7 +6,7 @@ tagline: 🚀为提升Java开发者工作效率而生的IDEA插件
 actions:
   - actionText: ⛵️快速开始 →
     actionLink: /pages/e8ef29/
-  - actionText: ⚡️视频演示  
+  - actionText: ⚡️更多版本  
     actionLink: /pages/77f026/
     actionClass: button-fudoc
 bannerBg: none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
@@ -28,9 +28,7 @@ notices: # 可选的
 ---
 <Notice :data="$frontmatter.notices"/>
 
-<p align="center" style="padding-top: 0;margin-top: 0">
-  <a class="become-sponsor" href="/pages/2a8323/">成为赞助者</a>
-</p>
+
 
 <style>
 .become-sponsor{
