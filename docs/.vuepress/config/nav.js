@@ -25,7 +25,7 @@ module.exports = [
             { text: '前置脚本示例', link: '/pages/087a0f/'}
         ]
     },
-    { text: '💖赞助', link: '/pages/2a8323/' },
+  
     { text: '接口文档', link: '/pages/ba3f31/' },
     { text: '👥加入群聊', link: '/pages/52cc67/' },
     { text: '🏡GitHub', link: 'https://github.com/wangdingfu/fu-api-doc-plugin'},
