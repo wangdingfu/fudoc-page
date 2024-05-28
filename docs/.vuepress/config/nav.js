@@ -27,7 +27,6 @@ module.exports = [
     },
   
     { text: '接口文档', link: '/pages/ba3f31/' },
-    { text: '👥加入群聊', link: '/pages/52cc67/' },
     { text: '🏡GitHub', link: 'https://github.com/wangdingfu/fu-api-doc-plugin'},
     { text: '🐯Gitee', link: 'https://gitee.com/wdfu/fudoc'}
 ];
